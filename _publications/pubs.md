@@ -20,11 +20,17 @@ author_profile: true
 
 
 
-
 <!-- ## Forthcoming -->
-
 
 # Preprints
 
+- **J. Dumouchelle**, E. Julien, J. Kurtz, and E. B. Khalil. Neur2RO: Neural Two-Stage Robust Optimization. *arXiv preprint arXiv:2310.04345*, 2023. \
+   [[**Paper**](https://arxiv.org/pdf/2310.04345.pdf), 
+    [**Code**](https://github.com/khalil-research/Neur2RO)]
+
+
 - **J. Dumouchelle**, E. Frejinger, and A. Lodi. Reinforcement Learning for Freight Booking Control Problems.  *arXiv preprint arXiv:2102.00092*, 2022. \
-    [[**Paper**](https://arxiv-export1.library.cornell.edu/pdf/2102.00092)]
+    [[**Paper**](https://arxiv.org/pdf/2102.00092.pdf),
+     [**Code**](https://github.com/jdumouchelle/RLforBookingControl)]
+
+
