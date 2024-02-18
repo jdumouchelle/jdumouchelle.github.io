@@ -39,16 +39,17 @@ author_profile: true
     [**Website**](https://www.ecole.ai/),
     [**Code**](https://github.com/ds4dm/ecole)]
  -->
-<!-- ## Preprints
 
-- **J. Dumouchelle**, E. Julien, J. Kurtz, and E. B. Khalil. Neur2RO: Neural Two-Stage Robust Optimization. *arXiv preprint arXiv:2310.04345*, 2023. \
-   [[**Paper**](https://arxiv.org/pdf/2310.04345.pdf), 
-    [**Code**](https://github.com/khalil-research/Neur2RO)] -->
+## Preprints
+
+- **J. Dumouchelle**, E. Julien, J. Kurtz, and E. B. Khalil. Neur2BiLO: Neural Bilevel Optimization. *arXiv:2402.02552*, 2024. \
+   [[**Paper**](https://arxiv.org/pdf/2402.02552.pdf), 
+    [**Code**](https://github.com/khalil-research/Neur2BiLO)]
 
 
-## Software
+<!-- ## Software
 
 - Ecole, A Python library for Gym-like integration of machine learning in combinatorial optimization solvers.\
    [[**Website**](https://www.ecole.ai/),
     [**Code**](https://github.com/ds4dm/ecole),
-    [**Documentation**](https://doc.ecole.ai/py/en/stable/)]
+    [**Documentation**](https://doc.ecole.ai/py/en/stable/)] -->
