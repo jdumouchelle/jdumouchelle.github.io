@@ -13,11 +13,11 @@ author_profile: true
     [**\[Code\]**](https://github.com/khalil-research/Neur2BiLO)
 
 - **J. Dumouchelle**, E. Julien, J. Kurtz, and E. B. Khalil. Neur2RO: Neural Two-Stage Robust Optimization. *International Conference on Learning Representations*, 2024. \
-    [**\[Paper\]**](https://arxiv.org/pdf/2310.04345.pdf)
+    [**\[Paper\]**](https://openreview.net/pdf?id=T5Xb0iGCCv)
     [**\[Website\]**](https://khalil-research.github.io/Neur2RO/)
     [**\[Code\]**](https://github.com/khalil-research/Neur2RO)
 - **J. Dumouchelle\***, R. Patel\*, E. B. Khalil, and M. Bodur. Neur2SP: Neural Two-Stage Stochastic Programming. *Advances in Neural Information Processing Systems*, 2022. \
-    [**\[Paper\]**](https://arxiv.org/pdf/2205.12006.pdf)
+    [**\[Paper\]**](https://proceedings.neurips.cc/paper_files/paper/2022/file/9793671e4be9858a69a32545204d59d1-Paper-Conference.pdf)
     [**\[Website\]**](https://khalil-research.github.io/Neur2SP/)
     [**\[Code\]**](https://github.com/khalil-research/Neur2SP)
 
@@ -25,7 +25,7 @@ author_profile: true
 ## Journal Papers
 
 - **J. Dumouchelle**, E. Frejinger, and A. Lodi. Reinforcement Learning for Freight Booking Control Problems.  *Journal of Revenue and Pricing Management*, 2024. \
-     [**\[Paper\]**](https://arxiv.org/pdf/2102.00092.pdf)
+     [**\[Paper\]**](https://link.springer.com/article/10.1057/s41272-023-00459-1)
      [**\[Code\]**](https://github.com/jdumouchelle/RLforBookingControl)
 - M. Gasse,  S. Bowly, Q. Cappart, J. Charfreitag, L. Charlin, D. Chételat, A. Chmiela, **J. Dumouchelle**, ..., and M. Kun.  The machine learning for combinatorial optimization competition (ML4CO): Results and insights. *Proceedings of the NeurIPS 2021 Competitions and Demonstrations Track*, in *Proceedings of Machine Learning Research (PMLR)*, 2022.\
     [**\[Paper\]**](https://proceedings.mlr.press/v176/gasse22a/gasse22a.pdf)
@@ -35,7 +35,7 @@ author_profile: true
 ## Workshop Papers
 
 - A. Prouvost, **J. Dumouchelle**, L. Scavuzzo, M. Gasse, D. Chételat, and A. Lodi. Ecole:  A gym-like library for machine learning in combinatorial optimization solvers. *Learning Meets Combinatorial Algorithms at NeurIPS2020*, 2020. \
-    [**\[Paper\]**](https://arxiv.org/pdf/2011.06069.pdf)
+    [**\[Paper\]**](https://openreview.net/pdf?id=IVc9hqgibyB) 
     [**\[Website\]**](https://www.ecole.ai/)
     [**\[Code\]**](https://github.com/ds4dm/ecole)
 
