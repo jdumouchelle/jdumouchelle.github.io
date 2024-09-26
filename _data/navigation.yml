@@ -11,7 +11,8 @@ main:
   #   url: /talks/  
 
   - title: "CV"
-    url: /cv/    
+    url: /files/cv_justin_dumouchelle.pdf 
+  #  url: /cv/    
 
   # - title: "Teaching"
   #   url: /teaching/    
