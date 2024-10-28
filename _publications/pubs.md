@@ -6,6 +6,11 @@ author_profile: true
 ---
 
 
+## Under Review
+
+- **J. Dumouchelle**, E. Julien, J. Kurtz, and E. B. Khalil.  Deep Learning for Two-Stage Robust Integer Optimization.  Submitted to *Operations Research*, 2024.  Preprint will be made available soon.  
+
+
 ## Conference Papers
 
 - **J. Dumouchelle**, E. Julien, J. Kurtz, and E. B. Khalil. Neur2BiLO: Neural Bilevel Optimization. *Advances in Neural Information Processing Systems*, 2024. \
@@ -45,10 +50,10 @@ author_profile: true
     [**Code**](https://github.com/ds4dm/ecole)]
  -->
 
-## Working Papers
+<!-- ## Working Papers
 
 - **J. Dumouchelle**, E. Julien, J. Kurtz, and E. B. Khalil.  Neur2RO: Neural Two-Stage Robust Optimization.  In preparation for submission to *Operations Research*, 2024.  Extends conference paper with benchmarks, methodology, computational improvements, and theory.
-
+ -->
 
 <!-- ## Software
 
