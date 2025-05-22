@@ -25,4 +25,4 @@ My research interests are at the intersection of machine learning and operations
 
 
 
- **I will be recruiting Master's and Ph.D. students to start in Fall 2026. Please reach out with your CV by email if interested.**
+ **I will be recruiting Master's and Ph.D. students to start in Fall 2026 with an application deadline in January, 2026. Please reach out with your CV by email if interested.**
