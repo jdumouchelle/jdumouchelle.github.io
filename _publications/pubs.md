@@ -8,7 +8,7 @@ author_profile: true
 
 ## Under Review
 
-- **J. Dumouchelle**, E. Julien, J. Kurtz, and E. B. Khalil.  Deep Learning for Two-Stage Robust Integer Optimization.  Submitted to *Operations Research*, 2024.  Preprint will be made available soon.  \
+- **J. Dumouchelle**, E. Julien, J. Kurtz, and E. B. Khalil.  Deep Learning for Two-Stage Robust Integer Optimization.  Major Revision in *Operations Research*, 2025.   \
     [**\[Paper\]**](https://arxiv.org/pdf/2310.04345)
     [**\[Website\]**](https://khalil-research.github.io/Neur2RO/)
 
