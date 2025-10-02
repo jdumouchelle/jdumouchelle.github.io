@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Justin Dumouchelle"
 title_separator          : "-"
 name                     : &name "Justin Dumouchelle"
-description              : &description "PhD Candidate in Machine Learning and Operations Research"
+description              : &description "Assistant Professor"
 url                      : https://jdumouchelle.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "jdumouchelle/jdumouchelle.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Justin Dumouchelle"
   avatar           : "profile.png"
-  bio              : "PhD Candidate in Machine Learning and Operations Research"
-  location         : "University of Toronto"
+  bio              : "Assistant Professor in Mathematics & Statistics at University of Calgary"
+  location         : "Calgary, AB"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.ca/citations?user=G7vaoTMAAAAJ&hl=en&oi=ao"
-  email            : "justin.dumouchelle@mail.utoronto.ca"
+  email            : "justin.dumouchelle@ucalgary.ca"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
