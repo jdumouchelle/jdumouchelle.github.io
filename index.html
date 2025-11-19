@@ -110,6 +110,14 @@
             padding-top: 10px;
         }
         
+        .header-content {
+            display: block;
+        }
+        
+        .mobile-header {
+            display: none;
+        }
+        
         h1 {
             font-size: 2.5em;
             font-weight: 600;
@@ -351,9 +359,22 @@
                 font-size: 0.95em;
             }
             
+            .header-content {
+                display: none;
+            }
+            
+            .mobile-header {
+                display: block;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
             header {
                 position: static;
                 top: auto;
+                border-bottom: none;
+                padding-bottom: 0;
+                margin-bottom: 20px;
             }
             
             nav {
@@ -361,6 +382,8 @@
                 display: flex;
                 flex-wrap: wrap;
                 gap: 8px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #e5e7eb;
             }
             
             nav a {
@@ -447,6 +470,13 @@
 <body>
     <div class="top-bar"></div>
     <div class="container">
+        <!-- Mobile Header (only visible on mobile) -->
+        <div class="mobile-header">
+            <h1>Justin Dumouchelle</h1>
+            <div class="subtitle">Assistant Professor</div>
+            <div class="subtitle">Department of Mathematics & Statistics, University of Calgary</div>
+        </div>
+        
         <!-- Left Sidebar -->
         <aside class="sidebar">
             <div class="profile-photo">
@@ -464,9 +494,11 @@
         <!-- Main Content -->
         <div class="main-content">
             <header>
-                <h1>Justin Dumouchelle</h1>
-                <div class="subtitle">Assistant Professor</div>
-                <div class="subtitle">Department of Mathematics & Statistics, University of Calgary</div>
+                <div class="header-content">
+                    <h1>Justin Dumouchelle</h1>
+                    <div class="subtitle">Assistant Professor</div>
+                    <div class="subtitle">Department of Mathematics & Statistics, University of Calgary</div>
+                </div>
                 
                 <nav>
                     <a href="#about" class="nav-link active" data-page="about">About</a>
