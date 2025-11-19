@@ -45,11 +45,16 @@
         }
         
         .profile-photo {
-            width: 160px;
-            height: 160px;
+            width: 200px;          /* make the photo larger */
+            height: 200px;
             border-radius: 50%;
-            margin-bottom: 20px;
+            margin: 0 auto 20px;   /* center horizontally in the 200px sidebar */
             overflow: hidden;
+        }
+
+        .profile-photo {
+            margin-top: 20px;
+            margin-bottom: 30px;
         }
         
         .profile-photo img {
@@ -58,24 +63,35 @@
             object-fit: cover;
         }
         
+        .profile-photo {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
         .sidebar-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        
+        .sidebar-links a:last-child {
+            grid-column: 1 / -1;
+            justify-self: center;
+            width: 50%;
         }
         
         .sidebar-links a {
             color: #333;
             text-decoration: none;
-            font-size: 0.9em;
-            padding: 8px 16px;
+            font-size: 0.8em;
+            padding: 8px 10px;
             transition: all 0.2s;
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            gap: 6px;
             border-radius: 20px;
-            border: 2px solid transparent;
-            background-color: transparent;
+            border: 2px solid #e5e7eb;
+            background-color: #fafafa;
         }
         
         .sidebar-links a:hover {
@@ -322,7 +338,7 @@
                 height: 120px;
                 margin-bottom: 0;
             }
-            
+
             .sidebar-links {
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -531,7 +547,7 @@
             <!-- Research Page -->
             <div id="research" class="page">
                 <div class="content">
-                    <h2>Research</h2>
+                    <h2>Publications</h2>
                     
                     <h3 style="margin-top: 30px; margin-bottom: 20px; color: #1a1a1a; font-size: 1.3em;">Working Papers</h3>
                     
