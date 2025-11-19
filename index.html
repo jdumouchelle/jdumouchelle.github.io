@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Dumouchelle - University of Calgary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .top-bar {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #d6001c 0%, #ffcd00 100%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 48px 30px 60px 30px;
+            display: flex;
+            gap: 50px;
+        }
+        
+        .sidebar {
+            flex: 0 0 200px;
+            position: sticky;
+            top: 40px;
+            height: fit-content;
+        }
+        
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .sidebar-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .sidebar-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9em;
+            padding: 8px 16px;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            background-color: transparent;
+        }
+        
+        .sidebar-links a:hover {
+            border: 2px solid #ffcd00;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .sidebar-links a i {
+            width: 16px;
+            text-align: center;
+            color: #666;
+        }
+        
+        .sidebar-links a:hover i {
+            color: #ffcd00;
+        }
+        
+        .main-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 8px;
+            background-color: white;
+            z-index: 100;
+            padding-top: 10px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .subtitle {
+            font-size: 1.05em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        nav {
+            margin-top: 25px;
+        }
+        
+        nav a {
+            color: #999;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 1.05em;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.2s;
+            display: inline-block;
+            border: 2px solid #e5e7eb;
+            background-color: #fafafa;
+        }
+        
+        nav a:hover {
+            border: 2px solid #d6001c;
+            color: #d6001c;
+            background-color: #fff;
+        }
+        
+        nav a.active {
+            background-color: #d6001c;
+            color: white;
+            font-weight: 500;
+            border: 2px solid #d6001c;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { 
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .content {
+            margin-top: 30px;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .research-areas {
+            background-color: #F1F1F1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .research-areas strong {
+            color: #1a1a1a;
+        }
+        
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .highlight-box strong {
+            color: #1e40af;
+        }
+        
+        .publication {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .publication:last-child {
+            border-bottom: none;
+        }
+        
+        .publication-title {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+        
+        .publication-authors {
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .publication-venue {
+            color: #888;
+            font-style: italic;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+        
+        .publication-links {
+            margin-top: 8px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .publication-links a {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: transparent;
+            border: 1px solid #d6001c;
+            border-radius: 20px;
+            color: #d6001c;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+        
+        .publication-links a:hover {
+            background-color: #d6001c;
+            color: white;
+            text-decoration: none;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        footer {
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        /* Tablet styles */
+        @media (max-width: 968px) {
+            .container {
+                flex-direction: column;
+                gap: 30px;
+                padding: 40px 25px 50px 25px;
+            }
+            
+            .sidebar {
+                position: static;
+                flex: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 25px;
+            }
+            
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 0;
+            }
+            
+            .sidebar-links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .sidebar-links a {
+                font-size: 0.85em;
+                padding: 6px 12px;
+            }
+            
+            nav a {
+                margin-right: 15px;
+                font-size: 1em;
+                padding: 6px 14px;
+            }
+        }
+        
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px 40px 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .subtitle {
+                font-size: 0.95em;
+            }
+            
+            header {
+                position: static;
+                top: auto;
+            }
+            
+            nav {
+                margin-top: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            nav a {
+                margin-right: 0;
+                font-size: 0.95em;
+                padding: 6px 12px;
+            }
+            
+            .sidebar {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .sidebar-links {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .sidebar-links a {
+                flex: 0 0 calc(50% - 4px);
+                justify-content: center;
+                font-size: 0.8em;
+                padding: 8px 10px;
+            }
+            
+            p {
+                text-align: left;
+            }
+            
+            .research-areas,
+            .highlight-box {
+                padding: 15px;
+            }
+            
+            .publication-title {
+                font-size: 1em;
+            }
+            
+            .publication-links a {
+                font-size: 0.85em;
+                padding: 5px 12px;
+            }
+        }
+        
+        /* Small mobile styles */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+            }
+            
+            .container {
+                padding: 25px 15px 35px 15px;
+            }
+            
+            nav a {
+                font-size: 0.9em;
+                padding: 5px 10px;
+            }
+            
+            .sidebar-links a {
+                flex: 0 0 calc(50% - 4px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar"></div>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-photo">
+                <img src="profile.png" alt="Justin Dumouchelle">
+            </div>
+            <div class="sidebar-links">
+                <a href="mailto:justin.dumouchelle@ucalgary.ca"><i class="fas fa-envelope"></i>Email</a>
+                <a href="https://scholar.google.com/citations?user=G7vaoTMAAAAJ&hl=en&oi=ao" target="_blank"><i class="fas fa-graduation-cap"></i>Scholar</a>
+                <a href="https://github.com/jdumouchelle" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+                <a href="https://www.linkedin.com/in/justin-dumouchelle-676bbb84/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="cv_justin_dumouchelle.pdf" target="_blank"><i class="fas fa-file-pdf"></i>CV</a>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Justin Dumouchelle</h1>
+                <div class="subtitle">Assistant Professor</div>
+                <div class="subtitle">Department of Mathematics & Statistics, University of Calgary</div>
+                
+                <nav>
+                    <a href="#about" class="nav-link active" data-page="about">About</a>
+                    <a href="#research" class="nav-link" data-page="research">Research</a>
+                    <a href="#teaching" class="nav-link" data-page="teaching">Teaching</a>
+                </nav>
+            </header>
+            
+            <!-- About Page -->
+            <div id="about" class="page active">
+                <div class="content">
+                    <p>
+                        I am an Assistant Professor at the University of Calgary in the Department of Mathematics & Statistics. My research interests are at the intersection of machine learning and operations research. I am focused on developing efficient data-driven algorithms for complex decision-making problems, particularly in settings involving discrete decisions, uncertainty, and multiple decision-makers, with applications in logistics, transportation, and healthcare.
+                    </p>
+                    
+                    <div class="highlight-box">
+                        <strong>Prospective Students:</strong> I am recruiting Master's and Ph.D. students to begin in Fall 2026. I welcome applicants from Operations Research, Computer Science, Applied Mathematics, Statistics, and other quantitative fields aligned with optimization and machine learning. If you are interested, please email me your CV and transcripts; however, due to volume, I may not be able to reply to all inquiries.
+                    </div>
+                    
+                    <p>
+                        I completed my Ph.D. in Mechanical and Industrial Engineering Department at the University of Toronto under the supervision of <a href="https://www.mie.utoronto.ca/faculty_staff/khalil/" target="_blank">Elias Khalil</a>. Prior to my Ph.D., I completed my MASc in Applied Mathematics under the supervision of <a href="https://tech.cornell.edu/people/andrea-lodi/" target="_blank">Andrea Lodi</a> and <a href="https://www.emmafrejinger.org/" target="_blank">Emma Frejinger</a> at Polytechnique Montréal and my BMath in Computer Science and Combinatorics & Optimization from the University of Waterloo. I worked in industry for one year as a Machine Learning Research Intern at <a href="https://www.rbcborealis.com/" target="_blank">Borealis AI</a> on applied machine learning projects.
+                    </p>
+                    
+                    <div class="research-areas">
+                        <strong>Research Areas:</strong> Operations Research, Integer Programming, Stochastic Programming, Robust Optimization, Optimization Under Uncertainty, Machine Learning
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Research Page -->
+            <div id="research" class="page">
+                <div class="content">
+                    <h2>Research</h2>
+                    
+                    <h3 style="margin-top: 30px; margin-bottom: 20px; color: #1a1a1a; font-size: 1.3em;">Working Papers</h3>
+                    
+                    <div class="publication">
+                        <div class="publication-title">Deep Learning for Two-Stage Robust Integer Optimization</div>
+                        <div class="publication-authors">J. Dumouchelle, E. Julien, J. Kurtz, and E. B. Khalil</div>
+                        <div class="publication-venue">Major Revision in Operations Research, 2025</div>
+                        <div class="publication-links">
+                            <a href="https://arxiv.org/pdf/2310.04345" target="_blank">Paper</a>
+                            <a href="https://khalil-research.github.io/Neur2RO/" target="_blank">Website</a>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 40px; margin-bottom: 20px; color: #1a1a1a; font-size: 1.3em;">Conference Papers</h3>
+                    
+                    <div class="publication">
+                        <div class="publication-title">Neur2BiLO: Neural Bilevel Optimization</div>
+                        <div class="publication-authors">J. Dumouchelle, E. Julien, J. Kurtz, and E. B. Khalil</div>
+                        <div class="publication-venue">Advances in Neural Information Processing Systems (NeurIPS), 2024</div>
+                        <div class="publication-links">
+                            <a href="https://openreview.net/pdf?id=esVleaqkRc" target="_blank">Paper</a>
+                            <a href="https://khalil-research.github.io/Neur2BiLO/" target="_blank">Website</a>
+                            <a href="https://github.com/khalil-research/Neur2BiLO" target="_blank">Code</a>
+                        </div>
+                    </div>
+                    
+                    <div class="publication">
+                        <div class="publication-title">Neur2RO: Neural Two-Stage Robust Optimization</div>
+                        <div class="publication-authors">J. Dumouchelle, E. Julien, J. Kurtz, and E. B. Khalil</div>
+                        <div class="publication-venue">International Conference on Learning Representations (ICLR), 2024</div>
+                        <div class="publication-links">
+                            <a href="https://openreview.net/pdf?id=T5Xb0iGCCv" target="_blank">Paper</a>
+                            <a href="https://khalil-research.github.io/Neur2RO/" target="_blank">Website</a>
+                            <a href="https://github.com/khalil-research/Neur2RO" target="_blank">Code</a>
+                        </div>
+                    </div>
+                    
+                    <div class="publication">
+                        <div class="publication-title">Neur2SP: Neural Two-Stage Stochastic Programming</div>
+                        <div class="publication-authors">J. Dumouchelle*, R. Patel*, E. B. Khalil, and M. Bodur</div>
+                        <div class="publication-venue">Advances in Neural Information Processing Systems (NeurIPS), 2022</div>
+                        <div class="publication-links">
+                            <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/9793671e4be9858a69a32545204d59d1-Paper-Conference.pdf" target="_blank">Paper</a>
+                            <a href="https://khalil-research.github.io/Neur2SP/" target="_blank">Website</a>
+                            <a href="https://github.com/khalil-research/Neur2SP" target="_blank">Code</a>
+                        </div>
+                    </div>
+                    
+                    <div class="publication">
+                        <div class="publication-title">The machine learning for combinatorial optimization competition (ML4CO): Results and insights</div>
+                        <div class="publication-authors">M. Gasse, S. Bowly, Q. Cappart, J. Charfreitag, L. Charlin, D. Chételat, A. Chmiela, J. Dumouchelle, et al.</div>
+                        <div class="publication-venue">Proceedings of the NeurIPS 2021 Competitions and Demonstrations Track, PMLR, 2022</div>
+                        <div class="publication-links">
+                            <a href="https://proceedings.mlr.press/v176/gasse22a/gasse22a.pdf" target="_blank">Paper</a>
+                            <a href="https://www.ecole.ai/2021/ml4co-competition/" target="_blank">Website</a>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 40px; margin-bottom: 20px; color: #1a1a1a; font-size: 1.3em;">Journal Papers</h3>
+                    
+                    <div class="publication">
+                        <div class="publication-title">Reinforcement Learning for Freight Booking Control Problems</div>
+                        <div class="publication-authors">J. Dumouchelle, E. Frejinger, and A. Lodi</div>
+                        <div class="publication-venue">Journal of Revenue and Pricing Management, 2024</div>
+                        <div class="publication-links">
+                            <a href="https://link.springer.com/article/10.1057/s41272-023-00459-1" target="_blank">Paper</a>
+                            <a href="https://github.com/jdumouchelle/RLforBookingControl" target="_blank">Code</a>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 40px; margin-bottom: 20px; color: #1a1a1a; font-size: 1.3em;">Workshop Papers</h3>
+                    
+                    <div class="publication">
+                        <div class="publication-title">Ecole: A gym-like library for machine learning in combinatorial optimization solvers</div>
+                        <div class="publication-authors">A. Prouvost, J. Dumouchelle, L. Scavuzzo, M. Gasse, D. Chételat, and A. Lodi</div>
+                        <div class="publication-venue">Learning Meets Combinatorial Algorithms at NeurIPS 2020, 2020</div>
+                        <div class="publication-links">
+                            <a href="https://openreview.net/pdf?id=IVc9hqgibyB" target="_blank">Paper</a>
+                            <a href="https://www.ecole.ai/" target="_blank">Website</a>
+                            <a href="https://github.com/ds4dm/ecole" target="_blank">Code</a>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 30px; color: #666; font-style: italic; font-size: 0.95em;">
+                        * denotes equal contribution.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Teaching Page -->
+            <div id="teaching" class="page">
+                <div class="content">
+                    <h2>Teaching</h2>
+                    
+                    <h3 style="margin-top: 30px; margin-bottom: 20px; color: #1a1a1a; font-size: 1.3em;">University of Calgary</h3>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <div style="font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Course Instructor</div>
+                        <ul>
+                            <li><strong>DATA 607 - Statistical and Machine Learning</strong>, Winter 2026</li>
+                            <li><strong>DATA 543 - Deep Learning</strong>, Winter 2026</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 style="margin-top: 30px; margin-bottom: 20px; color: #1a1a1a; font-size: 1.3em;">University of Toronto</h3>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <div style="font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Course Instructor</div>
+                        <ul>
+                            <li><strong>MIE245 - Data Structures and Algorithms</strong>, Winter 2025</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <div style="font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Teaching Assistant</div>
+                        <ul>
+                            <li><strong>MIE245 - Data Structures and Algorithms</strong>, Tutorial TA, Winter 2024</li>
+                            <li><strong>MIE335 - Algorithms and Numerical Methods</strong>, Tutorial TA, Winter 2023</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <footer>
+                <p>&copy; 2025 Justin Dumouchelle. Last updated: November 2025.</p>
+            </footer>
+        </div>
+    </div>
+    
+    <script>
+        // Navigation functionality
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pages = document.querySelectorAll('.page');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove active class from all links and pages
+                navLinks.forEach(l => l.classList.remove('active'));
+                pages.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked link
+                link.classList.add('active');
+                
+                // Show corresponding page
+                const pageId = link.getAttribute('data-page');
+                document.getElementById(pageId).classList.add('active');
+                
+                // Update URL hash
+                window.history.pushState(null, '', `#${pageId}`);
+                
+                // Scroll to top on page change for mobile
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+        
+        // Handle direct URL navigation and back/forward buttons
+        window.addEventListener('popstate', loadPageFromHash);
+        window.addEventListener('load', loadPageFromHash);
+        
+        function loadPageFromHash() {
+            const hash = window.location.hash.slice(1) || 'about';
+            const targetLink = document.querySelector(`[data-page="${hash}"]`);
+            
+            if (targetLink) {
+                navLinks.forEach(l => l.classList.remove('active'));
+                pages.forEach(p => p.classList.remove('active'));
+                
+                targetLink.classList.add('active');
+                document.getElementById(hash).classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
