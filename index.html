@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin Dumouchelle - University of Calgary</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d6001c'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial'>JD</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -17,6 +18,96 @@
             line-height: 1.7;
             color: #333;
             background-color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode .top-bar {
+            opacity: 0.9;
+        }
+        
+        body.dark-mode header {
+            background-color: #1a1a1a;
+            border-bottom-color: #333;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        body.dark-mode .header-identity .subtitle {
+            color: #999;
+        }
+        
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3,
+        body.dark-mode .publication-title,
+        body.dark-mode .research-areas strong,
+        body.dark-mode div[style*="color: #1a1a1a"] {
+            color: #f0f0f0 !important;
+        }
+        
+        body.dark-mode .subtitle,
+        body.dark-mode .publication-authors,
+        body.dark-mode p {
+            color: #b0b0b0;
+        }
+        
+        body.dark-mode .publication-venue {
+            color: #999;
+        }
+        
+        body.dark-mode .research-areas {
+            background-color: #2a2a2a;
+        }
+        
+        body.dark-mode .highlight-box {
+            background-color: #1e3a5f;
+            border-left-color: #3b82f6;
+        }
+        
+        body.dark-mode .highlight-box strong {
+            color: #93c5fd;
+        }
+        
+        body.dark-mode .publication {
+            border-bottom-color: #333;
+        }
+        
+        body.dark-mode nav a,
+        body.dark-mode .sidebar-links a {
+            background-color: #2a2a2a;
+            border-color: #444;
+            color: #b0b0b0;
+        }
+        
+        body.dark-mode nav a:hover {
+            background-color: rgba(214, 0, 28, 0.2);
+            border-color: rgba(214, 0, 28, 0.5);
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode .sidebar-links a:hover {
+            background-color: rgba(255, 205, 0, 0.2);
+            border-color: rgba(255, 205, 0, 0.5);
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode .sidebar-links a:hover i {
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode nav a.active {
+            background-color: #d6001c;
+            color: white;
+            border-color: #d6001c;
+        }
+        
+        body.dark-mode footer {
+            border-top-color: #333;
+            color: #888;
         }
         
         .top-bar {
@@ -32,39 +123,49 @@
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 48px 30px 60px 30px;
+            padding: 100px 30px 60px 30px;
             display: flex;
             gap: 50px;
+            position: relative;
+        }
+        
+        .sidebar-spacer {
+            flex: 0 0 200px;
         }
         
         .sidebar {
-            flex: 0 0 200px;
-            position: sticky;
-            top: 40px;
+            position: fixed;
+            top: 100px;
+            width: 200px;
             height: fit-content;
+        }
+
+        
+        @media (min-width: 1161px) {
+            .sidebar {
+                left: calc(50% - 550px);
+            }
+        }
+        
+        @media (max-width: 1160px) {
+            .sidebar {
+                left: 30px;
+            }
         }
         
         .profile-photo {
-            width: 200px;          /* make the photo larger */
+            width: 200px;
             height: 200px;
             border-radius: 50%;
-            margin: 0 auto 20px;   /* center horizontally in the 200px sidebar */
+            margin: 20px auto 30px;
             overflow: hidden;
-        }
-
-        .profile-photo {
-            margin-top: 20px;
-            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
         
         .profile-photo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-        
-        .profile-photo {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
 
         .sidebar-links {
@@ -80,7 +181,7 @@
         }
         
         .sidebar-links a {
-            color: #333;
+            color: #999;
             text-decoration: none;
             font-size: 0.8em;
             padding: 8px 10px;
@@ -95,24 +196,19 @@
         }
         
         .sidebar-links a:hover {
-            border: 2px solid #ffcd00;
+            background-color: rgba(255, 205, 0, 0.15);
+            border-color: rgba(255, 205, 0, 0.4);
             color: #333;
-            background-color: #fff;
-        }
-        
-        .sidebar-links a:hover {
-            background-color: rgba(255, 221, 0, 0.15);
-            border-color: rgba(255, 221, 0, 0.4);
         }
 
         .sidebar-links a i {
             width: 16px;
             text-align: center;
-            color: #666;
+            color: #999;
         }
         
         .sidebar-links a:hover i {
-            color: #ffcd00;
+            color: #333;
         }
         
         .main-content {
@@ -121,22 +217,112 @@
         }
         
         header {
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e5e7eb;
-            position: sticky;
+            position: fixed;
             top: 8px;
+            left: 0;
+            right: 0;
             background-color: white;
             z-index: 100;
-            padding-top: 10px;
+            padding: 12px 30px;
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
         
         .header-content {
+            display: none;
+        }
+        
+        .header-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .header-identity {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+        }
+        
+        .header-identity h1 {
+            font-size: 1.3em;
+            margin: 0;
+        }
+        
+        .header-identity .subtitle {
+            font-size: 0.85em;
+            color: #666;
             display: block;
         }
         
+        .header-identity {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;  /* Try 0px, 1px, or 2px for very tight spacing */
+        }
+
+        .header-identity h1 {
+            margin: 0;   /* already present */
+            line-height: 1.2;   /* optional: tighter line height */
+        }
+
+        .header-identity .subtitle {
+            margin: 0;   /* REMOVE original margin-bottom */
+            line-height: 1.2;   /* optional: tighter line height */
+        }
+
         .mobile-header {
             display: none;
+        }
+        
+        .dark-mode-toggle:hover {
+            background-color: #f0f0f0;
+            border-color: #d0d0d0;
+        }
+        
+        body.dark-mode .dark-mode-toggle {
+            background-color: #2a2a2a;
+            border-color: #444;
+            color: #ffcd00;
+        }
+        
+        body.dark-mode .dark-mode-toggle:hover {
+            background-color: #333;
+            border-color: #555;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #d6001c;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(214, 0, 28, 0.3);
+            z-index: 1001;
+            transition: all 0.3s;
+        }
+        
+        .back-to-top:hover {
+            background-color: #b00018;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(214, 0, 28, 0.4);
+        }
+        
+        .back-to-top.visible {
+            display: flex;
         }
         
         h1 {
@@ -153,26 +339,30 @@
         }
         
         nav {
-            margin-top: 25px;
+            margin: 0;
+            display: flex;
+            gap: 10px;
         }
         
         nav a {
             color: #999;
             text-decoration: none;
-            margin-right: 25px;
-            font-size: 1.05em;
-            padding: 8px 16px;
-            border-radius: 20px;
+            margin-right: 0;
+            font-size: 0.95em;
+            padding: 6px 16px;
+            border-radius: 25px;
             transition: all 0.2s;
             display: inline-block;
             border: 2px solid #e5e7eb;
             background-color: #fafafa;
+            min-width: 90px;
+            text-align: center;
         }
         
         nav a:hover {
-            border: 2px solid #d6001c;
-            color: #d6001c;
-            background-color: #fff;
+            background-color: rgba(214, 0, 28, 0.12);
+            border-color: rgba(214, 0, 28, 0.3);
+            color: #333;
         }
         
         nav a.active {
@@ -303,6 +493,12 @@
             text-decoration: none;
         }
         
+        @media (max-width: 768px) {
+            .header-identity {
+                display: none;
+            }
+        }
+
         ul {
             margin-left: 20px;
             margin-bottom: 15px;
@@ -326,7 +522,45 @@
             .container {
                 flex-direction: column;
                 gap: 30px;
-                padding: 40px 25px 50px 25px;
+                padding: 88px 25px 50px 25px;
+            }
+            
+            .sidebar-spacer {
+                display: none;
+            }
+            
+            .sidebar {
+                position: static;
+                width: auto;
+                flex: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 25px;
+            }
+            
+            .header-identity {
+                flex-direction: column;
+                gap: 5px;
+                align-items: flex-start;
+            }
+            
+            .header-identity h1 {
+                font-size: 1.1em;
+            }
+            
+            .header-identity .subtitle {
+                font-size: 0.8em;
+            }
+            
+            nav {
+                gap: 6px;
+            }
+            
+            nav a {
+                font-size: 0.85em;
+                padding: 5px 12px;
+                min-width: 75px;
             }
             
             .sidebar {
@@ -336,6 +570,13 @@
                 flex-direction: row;
                 align-items: center;
                 gap: 25px;
+            }
+            
+            header {
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: 0;
+                padding-right: 0;
             }
             
             .profile-photo {
@@ -362,17 +603,59 @@
             }
         }
 
-        .nav-link:not(.active):hover {
-            background-color: rgba(220, 38, 38, 0.12); /* soft red */
-            border-color: rgba(220, 38, 38, 0.3);
-            transition: background-color 0.2s ease, border-color 0.2s ease;
-            cursor: pointer;
-        }
-
         /* Mobile styles */
         @media (max-width: 768px) {
             .container {
-                padding: 30px 20px 40px 20px;
+                padding: 100px 20px 40px 20px;
+            }
+            
+            .sidebar-spacer {
+                display: none;
+            }
+            
+            header {
+                padding: 10px 20px;
+            }
+            
+            .header-wrapper {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+            
+            .header-identity h1 {
+                font-size: 1em;
+            }
+            
+            .header-identity .subtitle {
+                font-size: 0.75em;
+            }
+            
+            nav {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            nav a {
+                flex: 1;
+                font-size: 0.8em;
+                padding: 5px 8px;
+                min-width: auto;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.3em;
+            }
+            
+            header {
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: 0;
+                padding-right: 0;
             }
             
             h1 {
@@ -469,6 +752,71 @@
                 padding: 5px 12px;
             }
         }
+
+        /* Header-right + toggle layout (desktop & general) */
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: auto;
+        }
+
+        .dark-mode-toggle {
+            position: relative;
+            background-color: #fafafa;
+            border: 2px solid #e5e7eb;
+            border-radius: 25px;
+            padding: 6px 10px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #f0f0f0;
+            border-color: #d0d0d0;
+        }
+
+        body.dark-mode .dark-mode-toggle {
+            background-color: #2a2a2a;
+            border-color: #444;
+            color: #ffcd00;
+        }
+
+        body.dark-mode .dark-mode-toggle:hover {
+            background-color: #333;
+            border-color: #555;
+        }
+
+        /* Make nav + toggle share space nicely on smaller screens */
+        @media (max-width: 768px) {
+            .header-wrapper {
+                flex-direction: column;
+                gap: 12px;
+                align-items: stretch;
+            }
+
+            .header-right {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .header-right nav {
+                flex: 1;
+                min-width: 0;
+                display: flex;
+                gap: 8px;
+            }
+
+            .header-right nav a {
+                flex: 1;
+                min-width: 0;
+                padding: 5px 8px;
+                font-size: 0.8em;
+                white-space: nowrap;
+            }
+        }
         
         /* Small mobile styles */
         @media (max-width: 480px) {
@@ -497,15 +845,22 @@
 </head>
 <body>
     <div class="top-bar"></div>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
     <div class="container">
         <!-- Mobile Header (only visible on mobile) -->
         <div class="mobile-header">
             <h1>Justin Dumouchelle</h1>
             <div class="subtitle">Assistant Professor</div>
-            <div class="subtitle">Department of Mathematics & Statistics, University of Calgary</div>
+            <div class="subtitle">Department of Mathematics &amp; Statistics, University of Calgary</div>
         </div>
         
         <!-- Left Sidebar -->
+        <div class="sidebar-spacer"></div>
         <aside class="sidebar">
             <div class="profile-photo">
                 <img src="profile.png" alt="Justin Dumouchelle">
@@ -522,17 +877,25 @@
         <!-- Main Content -->
         <div class="main-content">
             <header>
-                <div class="header-content">
-                    <h1>Justin Dumouchelle</h1>
-                    <div class="subtitle">Assistant Professor</div>
-                    <div class="subtitle">Department of Mathematics & Statistics, University of Calgary</div>
+                <div class="header-wrapper">
+                    <div class="header-identity">
+                        <h1>Justin Dumouchelle</h1>
+                        <div class="subtitle">Assistant Professor</div>
+                        <div class="subtitle">Department of Mathematics &amp; Statistics, University of Calgary</div>
+                    </div>
+                    
+                    <div class="header-right">
+                        <nav>
+                            <a href="#about" class="nav-link active" data-page="about">About</a>
+                            <a href="#research" class="nav-link" data-page="research">Research</a>
+                            <a href="#teaching" class="nav-link" data-page="teaching">Teaching</a>
+                        </nav>
+                        <!-- Dark Mode Toggle (now properly beside nav) -->
+                        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
                 </div>
-                
-                <nav>
-                    <a href="#about" class="nav-link active" data-page="about">About</a>
-                    <a href="#research" class="nav-link" data-page="research">Research</a>
-                    <a href="#teaching" class="nav-link" data-page="teaching">Teaching</a>
-                </nav>
             </header>
             
             <!-- About Page -->
@@ -594,6 +957,7 @@
                             <a href="https://openreview.net/pdf?id=T5Xb0iGCCv" target="_blank">Paper</a>
                             <a href="https://khalil-research.github.io/Neur2RO/" target="_blank">Website</a>
                             <a href="https://github.com/khalil-research/Neur2RO" target="_blank">Code</a>
+                            <a href="https://www.youtube.com/watch?v=3cl0smeaTxk" target="_blank">Talk</a>
                         </div>
                     </div>
                     
@@ -666,7 +1030,7 @@
                     
                     <h3 style="margin-top: 30px; margin-bottom: 20px; color: #1a1a1a; font-size: 1.3em;">University of Toronto</h3>
                     
-                    <div style="margin-bottom: 30px;">
+                    <div style="margin-bottom: 30px%;">
                         <div style="font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Course Instructor</div>
                         <ul>
                             <li><strong>MIE245 - Data Structures and Algorithms</strong>, Winter 2025</li>
@@ -693,27 +1057,25 @@
         // Navigation functionality
         const navLinks = document.querySelectorAll('.nav-link');
         const pages = document.querySelectorAll('.page');
+        const header = document.querySelector('header');
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const backToTopBtn = document.getElementById('backToTop');
         
+        // Page navigation
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 
-                // Remove active class from all links and pages
                 navLinks.forEach(l => l.classList.remove('active'));
                 pages.forEach(p => p.classList.remove('active'));
                 
-                // Add active class to clicked link
                 link.classList.add('active');
                 
-                // Show corresponding page
                 const pageId = link.getAttribute('data-page');
                 document.getElementById(pageId).classList.add('active');
                 
-                // Update URL hash
                 window.history.pushState(null, '', `#${pageId}`);
-                
-                // Scroll to top on page change for mobile
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                // window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
         
@@ -733,6 +1095,45 @@
                 document.getElementById(hash).classList.add('active');
             }
         }
+        
+        // Show/hide back to top button on scroll
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        // Dark mode toggle
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const icon = darkModeToggle.querySelector('i');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+        
+        // Load dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.querySelector('i').classList.remove('fa-moon');
+            darkModeToggle.querySelector('i').classList.add('fa-sun');
+        }
+        
+        // Back to top functionality
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 </body>
 </html>
