@@ -925,8 +925,8 @@
     /* Force all icons (including CV) to be identical circles */
     .sidebar-links a {
         flex: 0 0 auto !important;
-        width: 48px !important;
-        height: 48px !important;
+        width: 42px !important;
+        height: 42px !important;
         padding: 0 !important;
         border-radius: 50% !important;
         display: flex !important;
@@ -951,6 +951,50 @@
         display: none !important;
     }
 }
+
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-photo {
+        margin-top: 0px;  /* try -10 to -40 depending on taste */
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-header {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-header h1 {
+        line-height: 1.15;   /* tighter */
+        margin-bottom: 2px;  /* reduce spacing under name */
+    }
+
+    .mobile-header .subtitle {
+        line-height: 1.15;   /* tighten subtitle spacing */
+        margin-bottom: 2px;  /* reduce gap between subtitle lines */
+    }
+
+    .mobile-header {
+        margin-bottom: 10px; /* keeps whole block compact */
+    }
+}
+
+/*@media (max-width: 768px) {
+    nav {
+        margin-top: 10px; /* was larger */
+    }
+}
+*/
+
 
     </style>
 </head>
