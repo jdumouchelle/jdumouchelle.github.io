@@ -1,22 +1,24 @@
 // Coffee data array - ADD NEW COFFEES HERE
 const coffees = [
     {
-        id: 'coffee1',
+        id: 'coffee5',
         name: 'Peru David Flores',
         fullName: 'Peru David Flores, Washed Sidra',
         roaster: 'Subtext Coffee',
         roasterUrl: 'https://www.subtext.coffee/',
         image: 'coffee/26_01_peru_david_flores.png',
         details: {
+            'Tasting Notes': 'David Flores',
             'Producer': 'David Flores',
-            'Region': 'Cajamarca, Peru',
+            'Origin' : 'Peru',
+            'Region': 'Cajamarca',
             'Varietal': 'Sidra',
             'Process': 'Washed',
             'Altitude': '1,850-1,900 masl'
         }
     },
     {
-        id: 'coffee2',
+        id: 'coffee4',
         name: 'The New School - Lychee',
         fullName: 'The New School - Lychee',
         roaster: 'Black & White Coffee Roasters',
@@ -47,7 +49,38 @@ const coffees = [
             'Altitude': '1,700 meters',
             'Roast': 'Light'
         }
+    },
+    {
+        id: 'coffee2',
+        name: 'Raspberry Candy Filter',
+        fullName: 'Raspberry Candy Filter',
+        roaster: 'ONA Coffee',
+        roasterUrl: 'https://onacoffee.com.au/',
+        image: 'coffee/25_11_raspberry_candy.png',
+        details: {
+            'Tasting Notes': 'Raspberry Candy, Chocolate, Hibiscus',
+            'Origin': 'Ethiopia',
+            'Region': 'Multiple Regions',
+            'Producer': 'Various Smallholders',
+            'Varietal': 'Various',
+            'Process': 'Blend',
+            'Roast': 'Medium'
+        }
+    },
+    {
+        id: 'coffee1',
+        name: 'Seoul Cinema',
+        fullName: 'Seoul Cinema',
+        roaster: 'Fritz Coffee',
+        roasterUrl: 'https://www.fritzcoffeecompany.com/',
+        image: 'coffee/25_11_seoul_cinema.jpg',
+        details: {
+            'Tasting Notes': 'Plum, Raspberry, Zest, Assam Tea, Sugar',
+            'Origin': 'Ethiopia (70%), Costa Rica (30%)',
+            'Process': 'Blend',
+            'Roast': 'Medium'
     }
+},
 ];
 
 // Extract year from filename (format: YY_MM_name.ext)
