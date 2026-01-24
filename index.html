@@ -708,14 +708,17 @@
             
             nav {
                 width: 100%;
-                justify-content: space-between;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
             }
             
             nav a {
-                flex: 1;
-                font-size: 0.8em;
-                padding: 5px 8px;
+                flex: 0 0 calc(50% - 3px);
+                font-size: 0.85em;
+                padding: 8px 12px;
                 min-width: auto;
+                text-align: center;
             }
             
             .back-to-top {
@@ -1096,7 +1099,7 @@
                 <img src="profile.png" alt="Justin Dumouchelle">
             </div>
             <div class="sidebar-links">
-                <a href="mailto:justin.dumouchelle@ucalgary.ca"><i class="fas fa-envelope"></i>Email</a>
+                <a href="/cdn-cgi/l/email-protection#aec4dbdddac7c080cadbc3c1dbcdc6cbc2c2cbeedbcdcfc2c9cfdcd780cdcf"><i class="fas fa-envelope"></i>Email</a>
                 <a href="https://scholar.google.com/citations?user=G7vaoTMAAAAJ&hl=en&oi=ao" target="_blank"><i class="fas fa-graduation-cap"></i>Scholar</a>
                 <a href="https://github.com/jdumouchelle" target="_blank"><i class="fab fa-github"></i>GitHub</a>
                 <a href="https://www.linkedin.com/in/justin-dumouchelle-676bbb84/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
@@ -1119,6 +1122,7 @@
                             <a href="#about" class="nav-link active" data-page="about">About</a>
                             <a href="#research" class="nav-link" data-page="research">Research</a>
                             <a href="#teaching" class="nav-link" data-page="teaching">Teaching</a>
+                            <a href="#misc" class="nav-link" data-page="misc">Misc</a>
                         </nav>
                         <!-- Dark Mode Toggle (now properly beside nav) -->
                         <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
@@ -1279,12 +1283,60 @@
                 </div>
             </div>
             
+            <!-- Misc Page -->
+            <div id="misc" class="page">
+                <div class="content">
+                    <p>
+                        Outside research, I enjoy spending time with my <a href="javascript:void(0);" onclick="openDogModal()" style="color: #2563eb; text-decoration: none; cursor: pointer;">dog</a>, hiking, cooking, and specialty coffee.
+                    </p>
+                    
+                    <div style="margin-top: 20px;">
+                        <button onclick="document.getElementById('coffeeGrid').style.display = document.getElementById('coffeeGrid').style.display === 'none' ? 'block' : 'none';" 
+                                style="display: inline-block; padding: 6px 14px; background-color: transparent; border: 1px solid #8B4513; border-radius: 20px; color: #8B4513; font-size: 0.9em; transition: all 0.2s; cursor: pointer; font-family: inherit;"
+                                onmouseover="this.style.backgroundColor='#8B4513'; this.style.color='white';" 
+                                onmouseout="this.style.backgroundColor='transparent'; this.style.color='#8B4513';">
+                            Coffee I'm Drinking
+                        </button>
+                    </div>
+                    
+                    <!-- Coffee Grid (hidden by default) -->
+                    <div id="coffeeGrid" style="display: none; margin-top: 30px;">
+                        <p style="margin-bottom: 25px; color: #666;">
+                            This page logs the coffees I've been drinking, primarily for my own record-keeping and to share with others. I enjoy brewing both espresso and pourover.
+                        </p>
+                        
+                        <div class="coffee-grid-container">
+                            <!-- Coffee cards will be loaded from coffee/coffees.js -->
+                        </div>
+                    </div>
+                    
+                    <!-- Coffee modals will be loaded from coffee/coffees.js -->
+                    
+                    <!-- Modal for Dog Photo -->
+                    <div id="dogModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); overflow: auto;">
+                        <div style="position: relative; background-color: white; margin: 5% auto; padding: 0; width: 90%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                            <span onclick="closeDogModal()" style="position: absolute; right: 20px; top: 15px; color: #999; font-size: 28px; font-weight: bold; cursor: pointer; z-index: 1001;">&times;</span>
+                            
+                            <div style="padding: 40px; text-align: center;">
+                                <h3 style="margin-top: 0; margin-bottom: 25px; color: #1a1a1a; font-size: 1.5em;">Cashew</h3>
+                                <img src="cashew.png" 
+                                     alt="Cashew" 
+                                     style="width: 100%; max-width: 500px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
             <footer>
                 <p>&copy; 2025 Justin Dumouchelle. Last updated: November 2025.</p>
             </footer>
         </div>
     </div>
     
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="coffee/coffees.js"></script>
     <script>
         // Navigation functionality
         const navLinks = document.querySelectorAll('.nav-link');
@@ -1369,10 +1421,36 @@
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-
-
+        
+        // Coffee modal functions
+        function openCoffeeModal(coffeeId) {
+            document.getElementById(coffeeId + 'Modal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+        
+        function closeCoffeeModal(coffeeId) {
+            document.getElementById(coffeeId + 'Modal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+        
+        // Dog modal functions
+        function openDogModal() {
+            document.getElementById('dogModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeDogModal() {
+            document.getElementById('dogModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target.id === 'coffee1Modal' || event.target.id === 'coffee2Modal' || event.target.id === 'dogModal') {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
     </script>
-
-
 </body>
 </html>
