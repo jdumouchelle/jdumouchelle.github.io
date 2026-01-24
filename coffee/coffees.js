@@ -1,6 +1,60 @@
 // Coffee data array - ADD NEW COFFEES HERE
 const coffees = [
     {
+        id: 'coffee8',
+        name: 'Red Honey',
+        fullName: 'Red Honey',
+        roaster: 'Escape Coffee',
+        roasterUrl: 'https://escape.cafe/',
+        image: 'coffee/26_01_red_honey.png',
+        details: {
+            'Tasting Notes': 'Rose Petal, Pomegranate, Cocoa, Cherry Jelly',
+            'Origin': 'Ethiopia',
+            'Region': 'Sidama',
+            'Farm': 'Faficho Bombe',
+            'Varietal': 'Heirloom + Landrace',
+            'Process': 'Red Honey',
+            'Altitude': '2,100-2,200 meters'
+        }
+    },
+        {
+        id: 'coffee7',
+        name: 'Orange Marmalade Decaf',
+        fullName: 'Orange Marmalade Decaf',
+        roaster: 'Colorfull Coffee',
+        roasterUrl: 'https://www.colorfullcoffee.com/',
+        image: 'coffee/26_01_orange_marmalade.jpg',
+        details: {
+            'Tasting Notes': 'Lemon, Orange Blossom, Marmalade',
+            'Producer': 'Wilton Benitez',
+            'Origin': 'Colombia',
+            'Region': 'Cauca',
+            'Varietal': 'Red Bourbon',
+            'Process': 'Anaerobic Washed',
+            'Altitude': '2,100 meters',
+            'Roast': 'Medium-Light',
+            'Caffeine': 'Decaffeinated'
+        }
+    },
+    {
+        id: 'coffee6',
+        name: 'Every Little Thing',
+        fullName: 'Every Little Thing',
+        roaster: 'FUNK Coffee',
+        roasterUrl: 'https://www.funk.coffee/',
+        image: 'coffee/26_01_every_little_thing.png',
+        details: {
+            'Tasting Notes': 'Mango',
+            'Producer': 'Sebastian Ramirez',
+            'Origin': 'Colombia',
+            'Region': 'Quindío',
+            'Varietal': 'Pink Bourbon',
+            'Process': 'Co-Ferment (Mango)',
+            'Altitude': '1,750 meters',
+            'Roast': 'Medium-Light'
+        }
+    },
+    {
         id: 'coffee5',
         name: 'Peru David Flores',
         fullName: 'Peru David Flores, Washed Sidra',
@@ -79,8 +133,8 @@ const coffees = [
             'Origin': 'Ethiopia (70%), Costa Rica (30%)',
             'Process': 'Blend',
             'Roast': 'Medium'
+        }
     }
-},
 ];
 
 // Extract year from filename (format: YY_MM_name.ext)
@@ -141,7 +195,7 @@ function generateCoffeeGrid() {
         html += `
             <div style="margin-top: ${topMargin};">
                 <h3 style="margin-bottom: 25px; color: #1a1a1a; font-size: 1.8em; border-bottom: 2px solid #8B4513; padding-bottom: 8px; display: inline-block;">${year}</h3>
-                <div class="coffee-year-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 30px;">
+                <div class="coffee-year-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(125px, 1fr)); gap: 30px;">
                     ${groupedByYear[year].map(coffee => generateCoffeeCard(coffee)).join('')}
                 </div>
             </div>
