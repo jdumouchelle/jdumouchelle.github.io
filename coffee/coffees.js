@@ -62,7 +62,7 @@ const coffees = [
         roasterUrl: 'https://www.subtext.coffee/',
         image: 'coffee/26_01_peru_david_flores.png',
         details: {
-            'Tasting Notes': 'David Flores',
+            'Tasting Notes': 'Plum, persimmon, floral',
             'Producer': 'David Flores',
             'Origin' : 'Peru',
             'Region': 'Cajamarca',
@@ -134,7 +134,127 @@ const coffees = [
             'Process': 'Blend',
             'Roast': 'Medium'
         }
-    }
+    },
+    {
+        id: 'coffee9',
+        name: 'Jack of Fruits',
+        fullName: 'Jack of Fruits',
+        roaster: 'Jindo Coffee',
+        roasterUrl: 'https://cafejindo.ca/',
+        image: 'coffee/25_11_jack_of_fruits.png',
+        details: {
+            'Origin': 'Indonesia',
+            'Region': 'Lintong, Sumatra',
+            'Varietal': 'Sigararutang, LiniS795, Andungsari',
+            'Process': 'Giling Basah',
+            'Altitude': '1,400 masl',
+            'Roast': 'Medium'
+        }
+    },
+    {
+        id: 'coffee10',
+        name: 'Blueberry Cheesecake',
+        fullName: 'Blueberry Cheesecake',
+        roaster: 'Jindo Coffee',
+        roasterUrl: 'https://cafejindo.ca/',
+        image: 'coffee/25_11_blueberry_cheesecake.png',
+        details: {
+            'Tasting Notes': 'Blueberry compote, creamy acidity, fresh mint, graham crackers',
+            'Origin': 'Ethiopia',
+            'Region': 'Bensa',
+            'Varietal': '74158 (Walega)',
+            'Process': 'White Honey',
+            'Altitude': '2,200+ masl',
+            'Roast': 'Medium'
+        }
+    },
+    {
+        id: 'coffee11',
+        name: 'Gisele Almeida',
+        fullName: 'Gisele Almeida',
+        roaster: 'Manhattan Coffee Roasters',
+        roasterUrl: 'https://manhattancoffeeroasters.com/',
+        image: 'coffee/25_09_gisele_almeida.png',
+        details: {
+            'Tasting Notes': 'Pineapple, Custard Apple, Yellow Jelly',
+            'Producer': 'Gisele Almeida',
+            'Origin': 'Brazil',
+            'Region': 'Mata de Minas',
+            'Farm': 'Sítio Almeida',
+            'Varietal': 'Yellow Catuai',
+            'Process': 'Pulped Natural',
+            'Altitude': '600 masl'
+        }
+    },
+    {
+        id: 'coffee12',
+        name: 'Micaela Jacinto',
+        fullName: 'Guatemala Micaela Jacinto',
+        roaster: 'Friedhats',
+        roasterUrl: 'https://friedhats.com/',
+        image: 'coffee/25_08_michaela_jacinto.png',
+        details: {
+            'Tasting Notes': 'Smarties, Orange Marmalade, Darjeeling Tea',
+            'Producer': 'Micaela Jacinto',
+            'Origin': 'Guatemala',
+            'Region': 'Concepcion Huista, Huehuetenango',
+            'Farm': 'Cacha\'pina',
+            'Cooperative': 'El Sendero',
+            'Varietal': 'Caturra, Bourbon',
+            'Process': 'Washed',
+            'Altitude': '1,700-1,750 masl'
+        }
+    },
+    {
+        id: 'coffee13',
+        name: 'Bekele Natural',
+        fullName: 'Bekele Natural',
+        roaster: 'Coffee Collective',
+        roasterUrl: 'https://coffeecollective.dk/',
+        image: 'coffee/25_08_bekele_natural.png',
+        details: {
+            'Tasting Notes': 'Red Strawberries, Wine Gums, Melon, Bergamot',
+            'Producer': 'Bekele Karchara',
+            'Origin': 'Ethiopia',
+            'Region': 'Murago, Sidama',
+            'Varietal': '74-158 Kurume',
+            'Process': 'Natural',
+            'Altitude': '2,200-2,350 masl'
+        }
+    },
+    {
+        id: 'coffee14',
+        name: 'Hazy Clafoutis',
+        fullName: 'Hazy Clafoutis - Kenya',
+        roaster: 'DAK Coffee Roasters',
+        roasterUrl: 'https://www.dakcoffeeroasters.com/',
+        image: 'coffee/25_07_hazy_clafoutis.png',
+        details: {
+            'Tasting Notes': 'Lavender, Black Cherry, Lemon',
+            'Origin': 'Kenya',
+            'Farm': 'Mtaro Estate',
+            'Varietal': 'SL-28, SL-34, Ruiru11',
+            'Process': 'Natural',
+            'Altitude': '1,900 masl'
+        }
+    },
+    {
+        id: 'coffee15',
+        name: 'Berry Blues',
+        fullName: 'Berry Blues',
+        roaster: 'DAK Coffee Roasters',
+        roasterUrl: 'https://www.dakcoffeeroasters.com/',
+        image: 'coffee/25_07_berry_blues.png',
+        details: {
+            'Tasting Notes': 'Blueberry, Purple Grape, Myrtle Liqueur, Cashew Butter',
+            'Producer': 'Esayas Beriso',
+            'Origin': 'Ethiopia',
+            'Region': 'Guji',
+            'Varietal': 'Heirloom',
+            'Process': 'Shade-Dried Anaerobic Natural',
+            'Altitude': '2,300 masl'
+        }
+    },
 ];
 
 // Extract year from filename (format: YY_MM_name.ext)

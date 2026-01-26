@@ -97,7 +97,7 @@
             justify-content: center !important;
           }
         }
-        
+
         body.dark-mode h1,
         body.dark-mode h2,
         body.dark-mode h3,
@@ -217,6 +217,84 @@
         body.dark-mode footer {
             border-top-color: #333;
             color: #888;
+        }
+
+        /* Dark mode: Coffee section styles */
+        body.dark-mode #coffeeGrid p {
+            color: #c0c0c0 !important;
+        }
+
+        body.dark-mode .coffee-grid-container h3 {
+            color: #f0f0f0 !important;
+            border-bottom-color: #a0724a !important;
+        }
+
+        body.dark-mode .coffee-grid-container div[style*="font-weight: 600"] {
+            color: #f0f0f0 !important;
+        }
+
+        body.dark-mode .coffee-grid-container div[style*="color: #666"] {
+            color: #b0b0b0 !important;
+        }
+
+        body.dark-mode .coffee-grid-container img {
+            box-shadow: 0 4px 12px rgba(255,255,255,0.15) !important;
+            background-color: #3a3a3a !important;
+        }
+
+        /* Dark mode: Coffee modals */
+        body.dark-mode #misc > .content > div[id$="Modal"] > div,
+        body.dark-mode div[id^="coffee"][id$="Modal"] > div {
+            background-color: #2a2a2a !important;
+        }
+
+        body.dark-mode div[id^="coffee"][id$="Modal"] h3 {
+            color: #f0f0f0 !important;
+        }
+
+        body.dark-mode div[id^="coffee"][id$="Modal"] strong {
+            color: #e0e0e0 !important;
+        }
+
+        body.dark-mode div[id^="coffee"][id$="Modal"] div[style*="flex: 1"] {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode div[id^="coffee"][id$="Modal"] span[onclick] {
+            color: #888 !important;
+        }
+
+        body.dark-mode div[id^="coffee"][id$="Modal"] span[onclick]:hover {
+            color: #fff !important;
+        }
+
+        /* Dark mode: Coffee button */
+        body.dark-mode #misc button[onclick*="coffeeGrid"] {
+            border-color: #a0724a !important;
+            color: #c9a07a !important;
+            background-color: transparent !important;
+        }
+
+        body.dark-mode #misc button[onclick*="coffeeGrid"]:hover {
+            background-color: #8B4513 !important;
+            color: white !important;
+        }
+
+        /* Dark mode: Dog modal */
+        body.dark-mode #dogModal > div {
+            background-color: #2a2a2a !important;
+        }
+
+        body.dark-mode #dogModal h3 {
+            color: #f0f0f0 !important;
+        }
+
+        body.dark-mode #dogModal span[onclick] {
+            color: #888 !important;
+        }
+
+        body.dark-mode #dogModal span[onclick]:hover {
+            color: #fff !important;
         }
         
         .top-bar {
