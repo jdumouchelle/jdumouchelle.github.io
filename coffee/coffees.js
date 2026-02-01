@@ -1,6 +1,22 @@
 // Coffee data array - ADD NEW COFFEES HERE
 const coffees = [
     {
+        id: 'coffee16',
+        name: 'Black Moon',
+        fullName: 'Black Moon - Chiroso',
+        roaster: 'Monogram Coffee',
+        roasterUrl: 'https://monogramcoffee.com/',
+        image: 'coffee/26_02_black_moon.png',
+        details: {
+            'Origin': 'Panama',
+            'Region': 'Alto Quiel, Boquete, Chiriquí',
+            'Farm': 'Black Moon Farm',
+            'Varietal': 'Chiroso',
+            'Process': 'Anaerobic Natural',
+            'Altitude': '1,700-1,780 masl'
+        }
+    },
+    {
         id: 'coffee8',
         name: 'Red Honey',
         fullName: 'Red Honey',
