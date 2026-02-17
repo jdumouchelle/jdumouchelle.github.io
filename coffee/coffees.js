@@ -1,9 +1,25 @@
 // Coffee data array
 // Ordered newest to oldest — to add a new coffee, insert at the top with the next id number.
 const coffees = [
-    // ── ADD NEW COFFEES HERE (next id: coffee18) ──
+    // ── ADD NEW COFFEES HERE (next id: coffee19) ──
 
     // ── 2026-02 ──
+    {
+        id: 'coffee18',
+        name: 'Red Inverse',
+        fullName: 'Red Inverse - Yunnan Tianhao Manor',
+        roaster: 'COFFEENOW',
+        roasterUrl: 'https://coffeenow.today/',
+        image: 'coffee/26_02_red_inverse.jpg',
+        details: {
+            'Tasting Notes': 'Jackfruit, Honeydew Melon, Wine Aroma, Chocolate Liqueur',
+            'Origin': 'China',
+            'Region': 'Lancan, Puer, Yunnan',
+            'Farm': 'Tianhao Manor',
+            'Varietal': 'Catimor',
+            'Process': 'Anaerobic Natural',
+        }
+    },
     {
         id: 'coffee17',
         name: 'Drift',
