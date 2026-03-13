@@ -1,9 +1,141 @@
 // Coffee data array
 // Ordered newest to oldest — to add a new coffee, insert at the top with the next id number.
 const coffees = [
-    // ── ADD NEW COFFEES HERE (next id: coffee19) ──
+    // ── ADD NEW COFFEES HERE (next id: coffee27) ──
+
+    // ── 2026-03 ──
+    {
+        id: 'coffee26',
+        name: 'Las Marias Geisha',
+        fullName: 'Colombia - Las Marias Entre Montanas Geisha',
+        roaster: 'Rogue Wave Coffee',
+        roasterUrl: 'https://roguewavecoffee.ca/',
+        image: 'coffee/26_03_rouge.png',
+        details: {
+            'Tasting Notes' : 'White plum, Jasmine, Orange, Pear, Honey, Lemongrass',
+            'Origin': 'Colombia',
+            'Farm': 'Las Marias',
+            'Varietal': 'Geisha',
+            'Process': 'Washed',
+        }
+    },
+    {
+        id: 'coffee25',
+        name: 'Loverboy',
+        fullName: 'Loverboy / Colombia',
+        roaster: 'Rosso Coffee Roasters',
+        roasterUrl: 'https://www.rossocoffeeroasters.com/',
+        image: 'coffee/26_03_loverboy.png',
+        details: {
+            'Tasting Notes': 'Blackberry, Dark Chocolate, Red Wine',
+            'Origin': 'Colombia',
+            'Region' : 'Quindio',
+            'Producer': 'Jairo Arcila',
+            'Varietal': 'Castillo',
+            'Process': 'Honey, Yeast & Passion Fruit Co-ferment'
+        }
+    },
+    {
+        id: 'coffee24',
+        name: 'Janson Geisha Lot 411',
+        fullName: 'Panama Janson Geisha Washed Lot 411',
+        roaster: 'Rosso Coffee Roasters',
+        roasterUrl: 'https://www.rossocoffeeroasters.com/',
+        image: 'coffee/26_03_janson_geisha.png',
+        details: {
+            'Tasting Notes' : 'White Peach, Jasmine, Lemongrass, Honey',
+            'Origin': 'Panama',
+            'Region' : 'Volcán',
+            'Producer': 'Janson Coffee Farm',
+            'Varietal': 'Geisha',
+            'Process': 'Washed',
+        }
+    },
+    {
+        id: 'coffee23',
+        name: 'Kenya Gichathaini AA',
+        fullName: 'Kenya Gichathaini AA',
+        roaster: 'Leaves Coffee Roasters',
+        roasterUrl: 'https://leavescoffee.jp/en',
+        image: 'coffee/26_03_kenya_gichathaini.jpg',
+        details: {
+            'Tasting Notes': 'Pomelo, Blackberry, Hibiscus Tea, Sugar Cane',
+            'Origin': 'Kenya',
+            'Region': 'Nyeri',
+            'Producer': 'Gichathaini Factory',
+            'Varietal': 'Ruiru 11, SL28, SL34, Batian',
+            'Process' : 'Washed',
+            'Altitude': '1,600-1,900 masl',
+        }
+    },
+    {
+        id: 'coffee22',
+        name: 'Honeysuckle Sorbet',
+        fullName: 'September - Honeysuckle Sorbet',
+        roaster: 'September Coffee Co.',
+        roasterUrl: 'https://september.coffee/',
+        image: 'coffee/26_03_honeysuckle_sorbet.jpg',
+        details: {
+            'Tasting Notes': 'Bergamot, Honeysuckle, Citrus',
+            'Origin': 'Ethiopia',
+            'Region': 'Sidama',
+            'Producer' : 'Smallhold farmers',
+            'Varietal': 'Heirloom',
+            'Process': 'Anaerobic Washed',
+        }
+    },
+    {
+        id: 'coffee21',
+        name: 'Strawberry Shortcake',
+        fullName: 'September - Strawberry Shortcake',
+        roaster: 'September Coffee Co.',
+        roasterUrl: 'https://september.coffee/',
+        image: 'coffee/26_03_strawberry_shortcake.jpg',
+        details: {
+            'Tasting Notes': 'Icing Sugar, Red Berries, Papaya',
+            'Origin': 'Ethiopia',
+            'Region': 'Sidama',
+            'Producer': 'Basha Bekele',
+            'Varietal': 'JARC 74158',
+            'Process': 'Anaerobic Natural'
+        }
+    },
 
     // ── 2026-02 ──
+    {
+        id: 'coffee20',
+        name: 'CGLE Cerro Azul',
+        fullName: 'CGLE Cerro Azul - Geisha "Patascoy Hill"',
+        roaster: 'Hatch Coffee',
+        roasterUrl: 'https://hatchcrafted.com/',
+        image: 'coffee/26_02_cgle_cerro_azul.jpg',
+        details: {
+            'Tasting Notes': 'Cherry, Grapefruit, Rum, Chocolate',
+            'Producer': 'Rigoberto and Luis Eduardo Herrera',
+            'Origin': 'Colombia',
+            'Region': 'Valle del Cauca',
+            'Farm': 'Cerro Azul',
+            'Varietal': 'Geisha',
+            'Note': 'CGLE Auction 2025 Rank #10'
+        }
+    },
+    {
+        id: 'coffee19',
+        name: 'La Negrita',
+        fullName: 'La Negrita - Wush Wush Double Nitrogen Flushed',
+        roaster: 'Hatch Coffee',
+        roasterUrl: 'https://hatchcrafted.com/',
+        image: 'coffee/26_02_negrita.jpg',
+        details: {
+            'Tasting Notes': 'Melon, Muscat Grape, Pineapple, Honey, Riesling',
+            'Producer': 'Mauricio Shattah',
+            'Origin': 'Colombia',
+            'Region': 'Tolima',
+            'Farm': 'La Negrita',
+            'Varietal': 'Wush Wush',
+            'Process': 'Double Nitrogen Flushed Anaerobic Natural'
+        }
+    },
     {
         id: 'coffee18',
         name: 'Red Inverse',
