@@ -1,7 +1,63 @@
 // Coffee data array
 // Ordered newest to oldest — to add a new coffee, insert at the top with the next id number.
 const coffees = [
-    // ── ADD NEW COFFEES HERE (next id: coffee27) ──
+    // ── ADD NEW COFFEES HERE (next id: coffee30) ──
+
+    // ── 2026-04 ──
+    {
+        id: 'coffee29',
+        name: 'I Want You Here',
+        fullName: 'FUNK - I Want You Here',
+        roaster: 'FUNK Coffee',
+        roasterUrl: 'https://funk.coffee/',
+        image: 'coffee/26_04_funk_i_want_you_here.png',
+        details: {
+            'Tasting Notes': 'Strawberry, Tamarind, Lime Leaf',
+            'Origin': 'Indonesia',
+            'Region': 'West Java',
+            'Farm': 'Java Frinsa Estate',
+            'Producer': 'Wildan Mustofa',
+            'Varietal': 'Multiple varieties',
+            'Process': 'Natural',
+            'Altitude': '1,400 meters',
+            'Roast': 'Medium-Light'
+        }
+    },
+    {
+        id: 'coffee28',
+        name: 'Rootbeer Float',
+        fullName: 'Luna Coffee - Rootbeer Float',
+        roaster: 'Luna Coffee',
+        roasterUrl: 'https://enjoylunacoffee.com/',
+        image: 'coffee/26_04_luna_rootbeer_float.jpg',
+        details: {
+            'Tasting Notes': 'Chinotto, Key Lime, Cream',
+            'Origin': 'Honduras',
+            'Region': 'Santa Bárbara',
+            'Producer': 'Grevil Sabillon',
+            'Varietal': 'Parainema',
+            'Process': 'Washed',
+            'Roast': 'Light'
+        }
+    },
+    {
+        id: 'coffee27',
+        name: 'Neon Milk',
+        fullName: 'DAK - Neon Milk',
+        roaster: 'DAK Coffee Roasters',
+        roasterUrl: 'https://www.dakcoffeeroasters.com/',
+        image: 'coffee/26_04_dak_neon_milk.png',
+        details: {
+            'Tasting Notes': 'Strawberry Milkshake, Hibiscus, White Sugar',
+            'Origin': 'Colombia',
+            'Region': 'Huila',
+            'Producer': 'Henry Bonilla',
+            'Varietal': 'Pink Bourbon',
+            'Process': 'Washed',
+            'Altitude': '1,750 meters',
+            'Roast': 'Light'
+        }
+    },
 
     // ── 2026-03 ──
     {
