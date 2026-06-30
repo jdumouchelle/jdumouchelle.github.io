@@ -1,7 +1,134 @@
 // Coffee data array
 // Ordered newest to oldest — to add a new coffee, insert at the top with the next id number.
 const coffees = [
-    // ── ADD NEW COFFEES HERE (next id: coffee30) ──
+    // ── ADD NEW COFFEES HERE (next id: coffee37) ──
+
+    // ── 2026-06 ──
+    {
+        id: 'coffee36',
+        name: 'Ruronzi',
+        fullName: 'Manhattan - Ruronzi',
+        roaster: 'Manhattan Coffee Roasters',
+        roasterUrl: 'https://manhattancoffeeroasters.com/',
+        image: 'coffee/26_06_manhattan_ruronzi.png',
+        details: {
+            'Tasting Notes': 'Blueberry, Melon, Cherry',
+            'Origin': 'Rwanda',
+            'Region': 'Karongi',
+            'Washing Station': 'Ruronzi',
+            'Producer': 'Uzziel Habimana',
+            'Varietal': 'Red Bourbon',
+            'Process': 'Anaerobic Natural',
+            'Altitude': '2,100 meters',
+            'Roast': 'Light'
+        }
+    },
+    {
+        id: 'coffee35',
+        name: 'Chorro Alto Orange Gesha',
+        fullName: 'The Source - Chorro Alto Thermal Orange Gesha',
+        roaster: 'The Source Coffee Roasters',
+        roasterUrl: 'https://thesourcecoffee.co.uk/',
+        image: 'coffee/26_06_source_chorro_alto_orange_gesha.png',
+        details: {
+            'Tasting Notes': 'Blood Orange, Yuzu, Mandarin',
+            'Origin': 'Colombia',
+            'Region': 'Huila',
+            'Farm': 'Chorro Alto',
+            'Producer': 'Luz Ángela Rojas',
+            'Varietal': 'Orange Gesha',
+            'Process': 'Thermal Shock',
+            'Altitude': '1,600 - 1,850 meters'
+        }
+    },
+    {
+        id: 'coffee34',
+        name: 'Quebraditas Sudan Rume',
+        fullName: 'The Source - Quebraditas Natural (Sudan Rume)',
+        roaster: 'The Source Coffee Roasters',
+        roasterUrl: 'https://thesourcecoffee.co.uk/',
+        image: 'coffee/26_06_source_quebraditas_sudan_rume.png',
+        details: {
+            'Tasting Notes': 'Apricot Jam, Mango, Peach',
+            'Origin': 'Colombia',
+            'Region': 'Huila',
+            'Farm': 'Quebraditas',
+            'Producer': 'Edinson Argote',
+            'Varietal': 'Sudan Rume',
+            'Process': 'Double Anaerobic Natural',
+            'Altitude': '1,700 meters'
+        }
+    },
+    {
+        id: 'coffee33',
+        name: 'La Negrita Red Geisha Natural',
+        fullName: 'Hatch - La Negrita Red Geisha Natural',
+        roaster: 'Hatch Coffee',
+        roasterUrl: 'https://hatchcrafted.com/',
+        image: 'coffee/26_06_negrita_natural.jpg',
+        details: {
+            'Tasting Notes': 'Gardenia, Grape, Blackberry, Nectarine, Beaujolais',
+            'Producer': 'Mauricio Shattah',
+            'Origin': 'Colombia',
+            'Region': 'Tolima',
+            'Farm': 'La Negrita',
+            'Varietal': 'Red Geisha',
+            'Process': 'Nitrogen Flushed Anaerobic Natural'
+        }
+    },
+    {
+        id: 'coffee32',
+        name: 'La Negrita Red Geisha Semi-Washed',
+        fullName: 'Hatch - La Negrita Red Geisha Semi-Washed',
+        roaster: 'Hatch Coffee',
+        roasterUrl: 'https://hatchcrafted.com/',
+        image: 'coffee/26_06_negrita_semi_washed.jpg',
+        details: {
+            'Tasting Notes': 'Lilac, Hibiscus, Apple, White Peach, Nectar',
+            'Producer': 'Mauricio Shattah',
+            'Origin': 'Colombia',
+            'Region': 'Tolima',
+            'Farm': 'La Negrita',
+            'Varietal': 'Red Geisha',
+            'Process': 'Nitrogen Flushed Anaerobic Semi-Washed'
+        }
+    },
+    {
+        id: 'coffee31',
+        name: 'Banko Gotiti',
+        fullName: 'SEY - Banko Gotiti',
+        roaster: 'SEY Coffee',
+        roasterUrl: 'https://www.seycoffee.com/',
+        image: 'coffee/26_06_sey_banko_gotiti.png',
+        details: {
+            'Tasting Notes': 'Peach Tea, Lemongrass, Wildflower Honey',
+            'Origin': 'Ethiopia',
+            'Region': 'Gedeb, Gedeo',
+            'Washing Station': 'Banko Gotiti',
+            'Producer': 'Smallholder farmers',
+            'Varietal': 'Ethiopian Landrace',
+            'Process': 'Washed',
+            'Altitude': '2,180 meters'
+        }
+    },
+    {
+        id: 'coffee30',
+        name: 'Echemo',
+        fullName: 'Tim Wendelboe - Echemo',
+        roaster: 'Tim Wendelboe',
+        roasterUrl: 'https://www.timwendelboe.no/',
+        image: 'coffee/26_06_tim_wendelboe_echemo.png',
+        details: {
+            'Tasting Notes': 'Floral, White Tea, Stone Fruits',
+            'Origin': 'Ethiopia',
+            'Region': 'Jimma',
+            'Farm': 'Echemo',
+            'Producer': 'Khalid Shifa',
+            'Varietal': 'Heirloom',
+            'Process': 'Washed',
+            'Roast': 'Light'
+        }
+    },
 
     // ── 2026-04 ──
     {
@@ -177,8 +304,8 @@ const coffees = [
     },
     {
         id: 'coffee19',
-        name: 'La Negrita',
-        fullName: 'La Negrita - Wush Wush Double Nitrogen Flushed',
+        name: 'La Negrita Wush Wush Natural',
+        fullName: 'Hatch - La Negrita Wush Wush Natural',
         roaster: 'Hatch Coffee',
         roasterUrl: 'https://hatchcrafted.com/',
         image: 'coffee/26_02_negrita.jpg',
