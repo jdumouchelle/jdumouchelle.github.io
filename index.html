@@ -28,7 +28,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
             line-height: 1.7;
             color: #333;
-            background-color: #fff;
+            background-color: #fffdf7;
             transition: background-color 0.3s, color 0.3s;
         }
         
@@ -161,15 +161,15 @@
         }
 
         .highlight-box-yellow {
-            background-color: #fff8d1;        /* tint of #ffcd00 */
-            border-left: 4px solid #ffcd00;   /* UCalgary yellow */
+            background-color: #f5f0e2;        /* warm cream with yellow tint */
+            border-left: 4px solid #e5b830;   /* warm gold */
             padding: 20px;
             margin: 20px 0;
             border-radius: 4px;
         }
 
         .highlight-box-yellow strong {
-            color: #b38900;                   /* deeper golden text */
+            color: #8b6914;                   /* muted gold text */
         }
 
         body.dark-mode .publication {
@@ -346,7 +346,7 @@
             border-radius: 50%;
             margin: 20px auto 30px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.28);
         }
         
         .profile-photo img {
@@ -379,7 +379,7 @@
             gap: 6px;
             border-radius: 20px;
             border: 2px solid #e5e7eb;
-            background-color: #fafafa;
+            background-color: #faf8f3;
         }
         
         .sidebar-links a:hover {
@@ -408,7 +408,7 @@
             top: 8px;
             left: 0;
             right: 0;
-            background-color: white;
+            background-color: #fffdf7;
             z-index: 100;
             padding: 12px 30px;
             border-bottom: 1px solid #e5e7eb;
@@ -541,7 +541,7 @@
             transition: all 0.2s;
             display: inline-block;
             border: 2px solid #e5e7eb;
-            background-color: #fafafa;
+            background-color: #faf8f3;
             min-width: 90px;
             text-align: center;
         }
@@ -605,9 +605,10 @@
         }
         
         .research-areas {
-            background-color: #F1F1F1;
+            background-color: #f5ebe8;
+            border-left: 4px solid #d6001c;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 4px;
             margin: 20px 0;
         }
         
@@ -946,12 +947,12 @@
                 font-size: 0.8em;
                 padding: 10px 12px;
                 border: 2px solid #e5e7eb;
-                background-color: #fafafa;
+                background-color: #faf8f3;
             }
-            
+
             .sidebar-links a:hover {
                 border: 2px solid #ffcd00;
-                background-color: #fff;
+                background-color: #fffdf7;
             }
             
             p {
@@ -983,7 +984,7 @@
 
         .dark-mode-toggle {
             position: relative;
-            background-color: #fafafa;
+            background-color: #faf8f3;
             border: 2px solid #e5e7eb;
             border-radius: 25px;
             padding: 6px 10px;
@@ -1110,7 +1111,7 @@
         font-weight: 600;
         color: #666;
 
-        background-color: #fafafa;
+        background-color: #faf8f3;
         border: 2px solid #e5e7eb;
     }
 
@@ -1238,7 +1239,7 @@
         <div class="sidebar-spacer"></div>
         <aside class="sidebar">
             <div class="profile-photo">
-                <img src="profile.png" alt="Justin Dumouchelle">
+                <img src="profile.jpg" alt="Justin Dumouchelle">
             </div>
             <div class="sidebar-links">
                 <a href="mailto:justin.dumouchelle@ucalgary.ca"><i class="fas fa-envelope"></i>Email</a>
@@ -1278,10 +1279,10 @@
             <div id="about" class="page active">
                 <div class="content">
                     <p>
-                        I am an Assistant Professor at the University of Calgary in the Department of Mathematics & Statistics. My research interests are at the intersection of machine learning and operations research. I am focused on developing efficient data-driven algorithms for complex decision-making problems, particularly in settings involving discrete decisions, uncertainty, and multiple decision-makers, with applications in logistics, transportation, and healthcare.
+                        I am an Assistant Professor at the University of Calgary in the Department of Mathematics & Statistics. My research focuses on developing algorithms combining AI and optimization to address complex combinatorial and mixed-integer optimization problems involving nested or sequential decisions, with applications in energy systems and logistics.
                     </p>
                     <p>
-                        I completed my Ph.D. in Mechanical and Industrial Engineering Department at the University of Toronto under the supervision of <a href="https://www.mie.utoronto.ca/faculty_staff/khalil/" target="_blank">Elias Khalil</a>. Prior to my Ph.D., I completed my MASc in Applied Mathematics under the supervision of <a href="https://tech.cornell.edu/people/andrea-lodi/" target="_blank">Andrea Lodi</a> and <a href="https://www.emmafrejinger.org/" target="_blank">Emma Frejinger</a> at Polytechnique Montréal and my BMath in Computer Science and Combinatorics & Optimization from the University of Waterloo. I worked in industry for one year as a Machine Learning Research Intern at <a href="https://www.rbcborealis.com/" target="_blank">Borealis AI</a> on applied machine learning projects.
+                        I completed my Ph.D. at the University of Toronto under the supervision of <a href="https://www.mie.utoronto.ca/faculty_staff/khalil/" target="_blank">Elias Khalil</a>, my MASc at Polytechnique Montréal with <a href="https://tech.cornell.edu/people/andrea-lodi/" target="_blank">Andrea Lodi</a> and <a href="https://www.emmafrejinger.org/" target="_blank">Emma Frejinger</a>, and my BMath at the University of Waterloo. I also spent one year working at <a href="https://www.rbcborealis.com/" target="_blank">Borealis AI</a>.
                     </p>
                     <div class="research-areas">
                         <strong>Research Areas:</strong> Operations Research, Integer Programming, Stochastic Programming, Robust Optimization, Optimization Under Uncertainty, Machine Learning
@@ -1302,8 +1303,8 @@
         <li>
             <strong>Graduate Students (MSc/PhD):</strong>
             I am recruiting students to begin in Fall 2027 and later.
-            I welcome applicants from Operations Research, Computer Science, Applied Mathematics, Industrial Engineering, Statistics, and related quantitative fields aligned with optimization and machine learning. 
-            Please email your resume/CV and transcripts if interested. Due to the volume of inquiries, I may not be able to respond to all messages individually.
+            I welcome applicants from Operations Research, Computer Science, Applied Mathematics, Industrial Engineering, Statistics, and related quantitative fields aligned with optimization and machine learning.
+            Please review the <a href="https://grad.ucalgary.ca/future-students/graduate/discover-opportunities/explore-programs/math-and-statistics-msc-thesis" target="_blank">MSc</a> and <a href="https://grad.ucalgary.ca/future-students/graduate/discover-opportunities/explore-programs/math-and-statistics-phd" target="_blank">PhD</a> admission requirements and submit an <a href="https://forms.gle/7DVaWR2RxvRJSb1Y7" target="_blank">interest form</a>. Due to the volume of inquiries, I may not be able to respond to all submissions individually.
         </li>
 
         <li>
@@ -1475,7 +1476,7 @@
                     
                     <!-- Modal for Dog Photo -->
                     <div id="dogModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); overflow: auto;">
-                        <div style="position: relative; background-color: white; margin: 5% auto; padding: 0; width: 90%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                        <div style="position: relative; background-color: #fffdf7; margin: 5% auto; padding: 0; width: 90%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
                             <span onclick="closeDogModal()" style="position: absolute; right: 20px; top: 15px; color: #999; font-size: 28px; font-weight: bold; cursor: pointer; z-index: 1001;">&times;</span>
                             
                             <div style="padding: 40px; text-align: center;">

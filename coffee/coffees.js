@@ -1,7 +1,73 @@
 // Coffee data array
 // Ordered newest to oldest — to add a new coffee, insert at the top with the next id number.
 const coffees = [
-    // ── ADD NEW COFFEES HERE (next id: coffee37) ──
+    // ── ADD NEW COFFEES HERE (next id: coffee41) ──
+
+    // ── 2026-08 ──
+    {
+        id: 'coffee40',
+        name: 'Contrast',
+        fullName: 'Paradigm Spark - Seasonal Edition 003: Contrast',
+        roaster: 'Paradigm Spark',
+        roasterUrl: 'https://paradigmspark.com/',
+        image: 'coffee/26_08_paradigm_contrast.png',
+        details: {
+            'Tasting Notes': 'Grape, Blackberry, Coconut-like Sweetness, Grapefruit Zest',
+            'Origin': 'Colombia & Ethiopia',
+            'Producers': 'Sebastián Ramírez & Tamiru Tadesse',
+            'Varietal': 'Maragesha & JARC 74158',
+            'Process': 'Washed + Natural Anaerobic Blend'
+        }
+    },
+    {
+        id: 'coffee39',
+        name: 'Surf Jam',
+        fullName: 'DAK - Surf Jam',
+        roaster: 'DAK Coffee Roasters',
+        roasterUrl: 'https://www.dakcoffeeroasters.com/',
+        image: 'coffee/26_08_dak_surf_jam.png',
+        details: {
+            'Tasting Notes': 'Blackberry, Sweet Cherries, Dates',
+            'Origin': 'Ethiopia',
+            'Region': 'Gedeb',
+            'Station': 'Chelchele',
+            'Varietal': 'Heirloom',
+            'Process': 'Natural'
+        }
+    },
+    {
+        id: 'coffee38',
+        name: 'Dragonfruit Spritz',
+        fullName: 'Native - Dragonfruit Spritz',
+        roaster: 'Native Coffee Co.',
+        roasterUrl: 'https://thenativecoffeecompany.com/',
+        image: 'coffee/26_08_native_dragonfruit_spritz.png',
+        details: {
+            'Tasting Notes': 'Dragonfruit, Raspberry, Lychee, Rose Candy, Creamy',
+            'Origin': 'Colombia',
+            'Region': 'Piendamo, Cauca',
+            'Farm': 'Finca El Paraiso',
+            'Producer': 'Diego Bermudez',
+            'Varietal': 'Castillo',
+            'Process': 'Double Anaerobic Thermal Shock'
+        }
+    },
+    {
+        id: 'coffee37',
+        name: 'Golden Hour',
+        fullName: 'September - Golden Hour',
+        roaster: 'September Coffee Co.',
+        roasterUrl: 'https://september.coffee/',
+        image: 'coffee/26_08_september_golden_hour.jpg',
+        details: {
+            'Tasting Notes': 'Peach, Fruit Smoothie, Lychee',
+            'Origin': 'Colombia',
+            'Region': 'Cauca',
+            'Producer': 'Diego Bermudez',
+            'Varietal': 'Castillo',
+            'Process': 'Advanced Anaerobic Washed'
+        }
+    },
 
     // ── 2026-06 ──
     {
@@ -714,7 +780,7 @@ function generateCoffeeModal(coffee) {
 
     return `
         <div id="${coffee.id}Modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); overflow: auto;">
-            <div style="position: relative; background-color: white; margin: 5% auto; padding: 0; width: 90%; max-width: 700px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <div style="position: relative; background-color: #fffdf7; margin: 5% auto; padding: 0; width: 90%; max-width: 700px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
                 <span onclick="closeCoffeeModal('${coffee.id}')" style="position: absolute; right: 20px; top: 15px; color: #999; font-size: 28px; font-weight: bold; cursor: pointer; z-index: 1001;">&times;</span>
 
                 <div style="padding: 40px;">
