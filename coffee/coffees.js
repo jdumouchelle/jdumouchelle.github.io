@@ -1,8 +1,111 @@
 // Coffee data array
 // Ordered newest to oldest — to add a new coffee, insert at the top with the next id number.
 const coffees = [
-    // ── ADD NEW COFFEES HERE (next id: coffee41) ──
+    // ── ADD NEW COFFEES HERE (next id: coffee47) ──
 
+    // ── 2026-10 ──
+    {
+        id: 'coffee46',
+        name: 'Lychee Peach',
+        fullName: 'Taith - Lychee Peach Castillo',
+        roaster: 'Taith Coffee',
+        roasterUrl: 'https://taithcoffee.com/',
+        image: 'coffee/26_10_taith_lychee_peach.png',
+        details: {
+            'Tasting Notes': 'Peach, Lychee, Mango',
+            'Origin': 'Colombia',
+            'Producer': 'El Paraiso',
+            'Varietal': 'Castillo',
+            'Process': 'Washed Yeast Fermentation (Yellow Fruits)',
+            'Altitude': '1,960 meters',
+            'Roast': 'Light'
+        }
+    },
+    {
+        id: 'coffee45',
+        name: 'Watermelon Co-Fermented',
+        fullName: 'Sandbox - Watermelon Co-Fermented Castillo',
+        roaster: 'Sandbox Coffee Roasters',
+        roasterUrl: 'https://sandboxcoffee.de/',
+        image: 'coffee/26_10_sandbox_watermelon.webp',
+        details: {
+            'Tasting Notes': 'Watermelon, Candy, Tropical Fruit',
+            'Origin': 'Colombia',
+            'Region': 'Huila',
+            'Farm': 'Los Patios',
+            'Varietal': 'Castillo',
+            'Process': 'Co-Fermented (Watermelon)',
+            'Altitude': '1,200-1,900 meters'
+        }
+    },
+    {
+        id: 'coffee44',
+        name: 'Mango Tango',
+        fullName: 'DAK - Mango Tango',
+        roaster: 'DAK Coffee Roasters',
+        roasterUrl: 'https://www.dakcoffeeroasters.com/',
+        image: 'coffee/26_10_dak_mango_tango.png',
+        details: {
+            'Tasting Notes': 'Mango, Strawberry Candy, Mandarin',
+            'Origin': 'Ethiopia',
+            'Region': 'Gedeb, Gedeo',
+            'Station': 'Danche',
+            'Varietal': 'Heirloom',
+            'Process': 'Natural',
+            'Altitude': '2,000-2,300 meters'
+        }
+    },
+    {
+        id: 'coffee43',
+        name: 'Copa de Oro',
+        fullName: 'Subtext - Juan Jimenez Copa de Oro #4',
+        roaster: 'Subtext Coffee',
+        roasterUrl: 'https://www.subtext.coffee/',
+        image: 'coffee/26_10_subtext_copa_de_oro.png',
+        details: {
+            'Tasting Notes': 'Blackcurrant, Peach Nectar, Strawberry',
+            'Origin': 'Colombia',
+            'Region': 'Huila',
+            'Producer': 'Juan Jimenez Peña',
+            'Varietal': 'Pink Bourbon',
+            'Process': 'Washed',
+            'Roast': 'Light'
+        }
+    },
+    {
+        id: 'coffee42',
+        name: "Pu'er Bloom",
+        fullName: "CoffeeNow - Pu'er Bloom Yunnan Las Flores",
+        roaster: 'CoffeeNow',
+        roasterUrl: 'https://coffeenow.today/',
+        image: 'coffee/26_10_coffeenow_puer_bloom.jpg',
+        details: {
+            'Tasting Notes': 'Gardenia Jasmine, Osmanthus, Starfruit, Pear',
+            'Origin': 'China',
+            'Region': "Pu'er, Yunnan",
+            'Varietal': 'Catimor',
+            'Process': 'Yeast Fermentation Washed',
+            'Altitude': '1,510 meters'
+        }
+    },
+    {
+        id: 'coffee41',
+        name: 'China Qiu Po',
+        fullName: 'Ethica - China Qiu Po Anaerobic Natural',
+        roaster: 'Ethica Coffee Roasters',
+        roasterUrl: 'https://ethica.coffee/',
+        image: 'coffee/26_10_ethica_qiu_po.png',
+        details: {
+            'Tasting Notes': 'Dark Plum, Raisin, Red Wine',
+            'Origin': 'China',
+            'Region': 'Lincang, Yunnan',
+            'Farm': 'Autumn Amber',
+            'Varietal': 'Catimor',
+            'Process': '48-hour Anaerobic Natural',
+            'Altitude': '1,600 meters',
+            'Roast': 'Light-Medium'
+        }
+    },
     // ── 2026-08 ──
     {
         id: 'coffee40',
